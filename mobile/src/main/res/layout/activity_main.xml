@@ -14,6 +14,7 @@
     <include layout="layout/content_main" />
     -->
 
+
     <Button
         android:text="@string/mainKnappKonvertera"
         android:layout_width="@dimen/knappBredd"
