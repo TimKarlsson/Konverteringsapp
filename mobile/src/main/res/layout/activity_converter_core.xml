@@ -61,9 +61,9 @@
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/convEffekt2"
+            android:layout_toEndOf="@id/convEffekt2"
             android:layout_alignBaseline="@id/convEffekt2"
-            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
             android:id="@+id/convEffektText2"
             />
 
@@ -104,10 +104,10 @@
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/convEffekt3"
+            android:layout_toEndOf="@id/convEffekt3"
             android:layout_alignBaseline="@id/convEffekt3"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
             android:id="@+id/convEffektText3"
             />
 
