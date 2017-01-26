@@ -12,7 +12,7 @@ public class converterActivity_choise extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_converter);
+        setContentView(R.layout.activity_converter_choise);
 
     }
 

@@ -23,7 +23,7 @@ public class converterActivity_core extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_converter_effekt);
+        setContentView(R.layout.activity_converter_core);
         ArrayAdapter<CharSequence> spinnerArrayAdapter = null;
 
     //Spinner1
