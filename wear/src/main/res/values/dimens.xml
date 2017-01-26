@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="knappMinStorlek">52dp</dimen>
+    <dimen name="textStorlek">21dp</dimen>
+    <dimen name="marginalEnd">16dp</dimen>
+
+</resources>

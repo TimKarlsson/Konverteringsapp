@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_converter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tim_tub.konverteringsapp.converterActivity_choise">
+
+    <TextView
+        android:text="@string/convVal"
+        android:id="@+id/convInfo"
+        android:textSize="@dimen/rubrik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:text="@string/convButtonEffekt"
+        android:textSize="@dimen/knappText"
+        android:layout_width="@dimen/knappBredd"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonTryck"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonEffekt"
+        android:onClick="effekt"/>
+
+    <Button
+        android:text="@string/convButtonTryck"
+        android:textSize="@dimen/knappText"
+        android:layout_width="@dimen/knappBredd"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonHastighet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonTryck"
+        android:onClick="preassure"
+        />
+
+    <Button
+        android:text="@string/convButtonHastighet"
+        android:textSize="@dimen/knappText"
+        android:layout_width="@dimen/knappBredd"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonHastighet"
+        android:onClick="speed"
+    />
+
+
+    <Button
+        android:text="@string/convButtonMått"
+        android:textSize="@dimen/knappText"
+        android:layout_width="@dimen/knappBredd"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonHastighet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonMått"
+        android:onClick="measure"
+    />
+
+
+    <Button
+        android:text="@string/convButtonFlöde"
+        android:textSize="@dimen/knappText"
+        android:layout_width="@dimen/knappBredd"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonMått"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonFlöde"
+    />
+</RelativeLayout>

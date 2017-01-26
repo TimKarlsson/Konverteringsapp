@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Tims mekapp</string>
+
+<!-- Main -->
+    <string name="mainKnappKonvertera">Konvertera</string>
+    <string name="mainKnappInfo">Information</string>
+
+<!-- Konvertera -->
+    <string name="convVal">Konvertera</string>
+    <string name="convInfo">Välj vad du vill konvertera:</string>
+    <string name="convInputHint">Ange ett tal:</string>
+    <string name="convButtonEffekt">Effekt</string>
+    <string name="convButtonTryck">Tryck</string>
+    <string name="convButtonHastighet">Hastighet</string>
+    <string name="convButtonMått">Mått</string>
+    <string name="convButtonFlöde">Flöde</string>
+
+    <string name="convEffektFrån">Från:</string>
+    <string name="convEffektTill">Till:</string>
+    <string name="convEffektRun">Omvandla</string>
+
+    <string name="convEffektErr1">Ange ett tal på rad 1!</string>
+    <string name="convEffektErr2">Välj enhet att konvertera från!</string>
+    <string name="convEffektErr3">Välj enhet att konvertera till!</string>
+    <string name="convEffektErr4">Går inte att konvertera till samma enhet!</string>
+
+<!-- Effekt -->
+    <string-array name="arrayConvEffekt1">
+        <item>Välj en enhet:</item>
+        <item>HK</item>
+        <item>KW</item>
+    </string-array>
+
+<!-- Tryck-->
+    <string-array name="arrayConvPreassure">
+        <item>Välj en enhet:</item>
+        <item>Bar</item>
+        <item>Psi</item>
+        <item>mmHg</item>
+    </string-array>
+
+<!-- Hastighet-->
+    <string-array name="arrayConvSpeed">
+        <item>Välj en enhet:</item>
+        <item>Km/H</item>
+        <item>Mph</item>
+        <item>Knop</item>
+    </string-array>
+
+<!-- Mått -->
+    <string-array name="arrayConvMeasure">
+        <item>Välj en enhet:</item>
+        <item>dm</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>Tum</item>
+    </string-array>
+
+<!-- Flöde -->
+    <string-array name="arrayConvFlow">
+        <item>Välj en enhet:</item>
+        <item>cfh</item>
+        <item>l/h</item>
+        <item>m³/h</item>
+    </string-array>
+
+
+
+<!-- Info / Moment -->
+    <string name="infoMoment_Info">Moment i Nm - ISO 898-1</string>
+    <string name="infoMoment_GrovSkruv">Grovgängade skruvar</string>
+    <string name="infoMoment_Kvalité">Hållfastighet</string>
+    <string name="infoMoment_Gänga">Gänga</string>
+    <string name="infoMoment_stigning">Stigning</string>
+    <string name="infoMoment_FinSkruv">Fingänga</string>
+    <string name="infoMoment_StandardSkruv">Standardgänga</string>
+
+
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tim_tub.konverteringsapp.MainActivity"
+    tools:deviceIds="wear">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="@string/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/textStorlek" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:text="@string/mainKnappC"
+            android:id="@+id/buttonC"
+            android:longClickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/knappMinStorlek"
+            android:minHeight="@dimen/knappMinStorlek"
+            android:textSize="@dimen/textStorlek"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"/>
+
+        <Button
+            android:text="@string/mainKnappPlus"
+            android:id="@+id/buttonPlus"
+            android:layout_above="@+id/adjRightCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/knappMinStorlek"
+            android:minHeight="@dimen/knappMinStorlek"
+            android:textSize="@dimen/textStorlek"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/marginalEnd"
+            />
+
+        <Space
+            android:id="@+id/adjRightCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/marginalEnd"/>
+
+
+        <Button
+            android:text="@string/mainKnappDecimal"
+            android:id="@+id/buttonDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/adjRightCenter"
+            android:layout_marginRight="@dimen/marginalEnd"
+            android:minWidth="@dimen/knappMinStorlek"
+            android:minHeight="@dimen/knappMinStorlek"
+            android:textSize="@dimen/textStorlek"/>
+
+    </RelativeLayout>
+
+</android.support.wearable.view.BoxInsetLayout>
+
+<!--//TODO: Fixa layout för fler skärmstorlekar!-->
