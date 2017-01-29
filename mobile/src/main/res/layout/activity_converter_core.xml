@@ -17,7 +17,7 @@
     <!--Rad 0-->
         <TextView
             android:text="@string/convInfo"
-            android:id="@+id/convInfoEffekt"
+            android:id="@+id/convInfoCore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -29,101 +29,104 @@
             android:text="1."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/convInfoEffekt"
+            android:layout_below="@id/convInfoCore"
             android:layout_alignParentStart="true"
-            android:id="@+id/convEffekt1"
+            android:id="@+id/convCore1"
             android:layout_marginTop="20dp"/>
 
         <EditText
             android:hint="@string/convInputHint"
-            android:id="@+id/convEffektInput"
+            android:id="@+id/convCoreInput"
             android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:minWidth="140dp"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/convEffekt1"
-            android:layout_alignBottom="@+id/convEffekt1"
+            android:layout_alignBaseline="@+id/convCore1"
+            android:layout_alignBottom="@+id/convCore1"
             android:layout_centerHorizontal="true" />
 
         <!--Rad 2-->
         <TextView
             android:text="2."
+            android:id="@+id/convCore2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/convEffekt1"
+            android:layout_below="@id/convCore1"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
-            android:id="@+id/convEffekt2"
             />
+
         <TextView
-            android:text="@string/convEffektFrån"
+            android:text="@string/convCoreFrån"
+            android:id="@+id/convCoreText2"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/convEffekt2"
-            android:layout_alignBaseline="@id/convEffekt2"
+            android:layout_toEndOf="@id/convCore2"
+            android:layout_alignBaseline="@id/convCore2"
             android:layout_marginStart="4dp"
-            android:id="@+id/convEffektText2"
             />
 
         <Spinner
-            android:id="@+id/convSpinner1"
+            android:id="@+id/convCoreSpinner1"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/convEffekt2"
-            android:layout_alignBottom="@+id/convEffekt2"
-            android:layout_alignStart="@+id/convSpinner2" />
+            android:layout_alignBaseline="@+id/convCore2"
+            android:layout_alignBottom="@+id/convCore2"
+            android:layout_alignStart="@+id/convCoreSpinner2" />
 
         <!--Rad 3-->
-        <Button
-            android:text="\\/"
-            android:textStyle="bold"
-            android:id="@+id/convEffektDirektion"
-            android:layout_width="50dp"
+        <ImageButton
+            android:background="@mipmap/arrow"
+            android:id="@+id/convCoreButtonDirektion"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/convEffekt2"
+            android:layout_below="@id/convCore2"
+            android:layout_alignStart="@id/convCoreText2"
             android:layout_marginTop="12dp"
-            android:layout_alignParentStart="true"
-            android:onClick="changeConvDir"/>
+            android:layout_marginLeft="-6dp"
+            android:onClick="changeConvDir"
+            />
 
         <!-- Rad 4 -->
         <TextView
             android:text="3."
+            android:id="@+id/convCore3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/convEffektDirektion"
+            android:layout_below="@id/convCoreButtonDirektion"
             android:layout_alignParentStart="true"
             android:layout_marginTop="12dp"
-            android:id="@+id/convEffekt3"
+
             />
 
         <TextView
-            android:text="@string/convEffektTill"
+            android:text="@string/convCoreTill"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/convEffekt3"
-            android:layout_alignBaseline="@id/convEffekt3"
+            android:layout_toEndOf="@id/convCore3"
+            android:layout_alignBaseline="@id/convCore3"
             android:layout_marginTop="10dp"
             android:layout_marginStart="4dp"
-            android:id="@+id/convEffektText3"
+            android:id="@+id/convCoreText3"
             />
 
         <Spinner
-            android:id="@+id/convSpinner2"
+            android:id="@+id/convCoreSpinner2"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/convEffekt3"
-            android:layout_alignBottom="@+id/convEffekt3"
+            android:layout_alignBaseline="@+id/convCore3"
+            android:layout_alignBottom="@+id/convCore3"
             android:layout_centerHorizontal="true" />
 
     <!-- Rad 5 -->
         <Button
-            android:text="@string/convEffektRun"
-            android:id="@+id/convEffektRun"
-            android:layout_below="@id/convEffekt3"
+            android:text="@string/convCoreRun"
+            android:id="@+id/convCoreRun"
+            android:layout_below="@id/convCore3"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,10 +135,10 @@
 
     <!-- Rad 6 -->
         <TextView
-            android:id="@+id/convEffektResultat"
+            android:id="@+id/convCoreResultat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/convEffektRun"
+            android:layout_below="@id/convCoreRun"
             android:layout_marginTop="40dp"
             android:textAlignment="center"
         android:textSize="20sp"/>

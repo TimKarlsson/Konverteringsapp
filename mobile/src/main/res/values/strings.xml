@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Tims mekapp</string>
-
 <!-- Main -->
-    <string name="mainKnappKonvertera">Konvertera</string>
-    <string name="mainKnappInfo">Information</string>
+    <string name="mainButtonKonvertera">Konvertera</string>
+    <string name="mainButtonInfo">Information</string>
 
 <!-- Konvertera -->
     <string name="convVal">Konvertera</string>
@@ -15,24 +13,24 @@
     <string name="convButtonMått">Mått</string>
     <string name="convButtonFlöde">Flöde</string>
 
-    <string name="convEffektFrån">Från:</string>
-    <string name="convEffektTill">Till:</string>
-    <string name="convEffektRun">Omvandla</string>
+    <string name="convCoreFrån">Från:</string>
+    <string name="convCoreTill">Till:</string>
+    <string name="convCoreRun">Omvandla</string>
 
-    <string name="convEffektErr1">Ange ett tal på rad 1!</string>
-    <string name="convEffektErr2">Välj enhet att konvertera från!</string>
-    <string name="convEffektErr3">Välj enhet att konvertera till!</string>
-    <string name="convEffektErr4">Går inte att konvertera till samma enhet!</string>
+    <string name="convCoreErr1">Ange ett tal på rad 1!</string>
+    <string name="convCoreErr2">Välj enhet att konvertera från!</string>
+    <string name="convCoreErr3">Välj enhet att konvertera till!</string>
+    <string name="convCoreErr4">Går inte att konvertera till samma enhet!</string>
 
 <!-- Effekt -->
-    <string-array name="arrayConvEffekt1">
+    <string-array name="convPowerArray">
         <item>Välj en enhet:</item>
         <item>HK</item>
         <item>KW</item>
     </string-array>
 
 <!-- Tryck-->
-    <string-array name="arrayConvPreassure">
+    <string-array name="convPreassureArray">
         <item>Välj en enhet:</item>
         <item>Bar</item>
         <item>Psi</item>
@@ -40,15 +38,16 @@
     </string-array>
 
 <!-- Hastighet-->
-    <string-array name="arrayConvSpeed">
+    <string-array name="convSpeedArray">
         <item>Välj en enhet:</item>
         <item>Km/H</item>
         <item>Mph</item>
         <item>Knop</item>
+        <item>m/s</item>
     </string-array>
 
 <!-- Mått -->
-    <string-array name="arrayConvMeasure">
+    <string-array name="convMeasureArray">
         <item>Välj en enhet:</item>
         <item>dm</item>
         <item>cm</item>
@@ -57,7 +56,7 @@
     </string-array>
 
 <!-- Flöde -->
-    <string-array name="arrayConvFlow">
+    <string-array name="convFlowArray">
         <item>Välj en enhet:</item>
         <item>cfh</item>
         <item>l/h</item>

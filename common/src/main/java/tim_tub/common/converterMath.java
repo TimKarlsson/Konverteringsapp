@@ -10,14 +10,10 @@ import java.math.BigDecimal;
     import tim_tub.common.converterMath;
     converterMath xxx = new converterMath();
 */
+
 public class converterMath {
-
-    //public static final String test = "Test";
-
-    //BigDecimal Resultat = new BigDecimal(0.0);
-
 //Effekt
-    public static final BigDecimal hkTillKw = new BigDecimal(0.73549875);		                                        //Omräkning HK till KW
+    public static final BigDecimal hkTillKw = new BigDecimal(0.73549875);		                                        //Omräkning HK till KW (Engelska HP 0.745699872)
     public static final BigDecimal kwTillHk = new BigDecimal(1.359621617);			                                    //Omräkning KW till HK
 
 
@@ -50,7 +46,20 @@ public class converterMath {
 
 
 
-    //Hastighet
+//Hastighet
     public static final BigDecimal kmhTillMph = new BigDecimal(0.621371192);
+    public static final BigDecimal kmhTillKnop = new BigDecimal(0.5399568035);
+    public static final BigDecimal kmhTillMs = new BigDecimal(0.277777778);
+
     public static final BigDecimal mphTillKmh = new BigDecimal(1.609344);
+    public static final BigDecimal mphTillKnop = new BigDecimal(0.8689762419);
+    public static final BigDecimal mphTillMs = new BigDecimal(0.44704);
+
+    public static final BigDecimal msTillKmh = new BigDecimal(3.6);
+    public static final BigDecimal msTillMph = new BigDecimal(2.2369362921);
+    public static final BigDecimal msTillKnop = new BigDecimal(1.9438444924);
+
+    public static final BigDecimal knopTillKmh = new BigDecimal(1.8519995164);
+    public static final BigDecimal knopTillMph = new BigDecimal(1.150779448);
+    public static final BigDecimal knopTillMs = new BigDecimal(0.5144443101);
 }

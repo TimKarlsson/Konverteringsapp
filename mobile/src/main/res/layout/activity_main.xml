@@ -15,7 +15,7 @@
     -->
 
     <Button
-        android:text="@string/mainKnappKonvertera"
+        android:text="@string/mainButtonKonvertera"
         android:layout_width="@dimen/knappBredd"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
         />
 
     <Button
-        android:text="@string/mainKnappInfo"
+        android:text="@string/mainButtonInfo"
         android:layout_width="@dimen/knappBredd"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -46,7 +46,7 @@
         android:text=" "
         android:layout_width="@dimen/knappBredd"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mainKnappInfo"
+        android:layout_below="@+id/mainButtonInfo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/knappMarginal"
         android:textSize="@dimen/knappText"
