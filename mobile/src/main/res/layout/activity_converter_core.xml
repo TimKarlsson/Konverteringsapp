@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="tim_tub.konverteringsapp.converterActivity_core">
+
+    <!--//TODO: TalkBack - http://stackoverflow.com/questions/9730673/missing-contentdescription-attribute-on-image-in-xml -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,20 +34,21 @@
             android:layout_below="@id/convInfoCore"
             android:layout_alignParentStart="true"
             android:id="@+id/convCore1"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText"/>
 
         <EditText
             android:hint="@string/convInputHint"
             android:id="@+id/convCoreInput"
             android:inputType="numberDecimal"
             android:layout_width="wrap_content"
-            android:minWidth="140dp"
+            android:minWidth="152dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/convCore1"
             android:layout_alignBottom="@+id/convCore1"
             android:layout_centerHorizontal="true" />
 
-        <!--Rad 2-->
+    <!--Rad 2-->
         <TextView
             android:text="2."
             android:id="@+id/convCore2"
@@ -54,6 +57,7 @@
             android:layout_below="@id/convCore1"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText"
             />
 
         <TextView
@@ -76,7 +80,7 @@
             android:layout_alignBottom="@+id/convCore2"
             android:layout_alignStart="@+id/convCoreSpinner2" />
 
-        <!--Rad 3-->
+    <!--Rad 3-->
         <ImageButton
             android:background="@mipmap/arrow"
             android:id="@+id/convCoreButtonDirektion"
@@ -85,11 +89,12 @@
             android:layout_below="@id/convCore2"
             android:layout_alignStart="@id/convCoreText2"
             android:layout_marginTop="12dp"
-            android:layout_marginLeft="-6dp"
+            android:layout_marginStart="-6dp"
             android:onClick="changeConvDir"
+            android:contentDescription="@string/convCoreButtonDirektion"
             />
 
-        <!-- Rad 4 -->
+    <!-- Rad 4 -->
         <TextView
             android:text="3."
             android:id="@+id/convCore3"
@@ -98,6 +103,7 @@
             android:layout_below="@id/convCoreButtonDirektion"
             android:layout_alignParentStart="true"
             android:layout_marginTop="12dp"
+            tools:ignore="HardcodedText"
 
             />
 
@@ -141,6 +147,8 @@
             android:layout_below="@id/convCoreRun"
             android:layout_marginTop="40dp"
             android:textAlignment="center"
-        android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textIsSelectable="true"
+            />
     </RelativeLayout>
 </ScrollView>

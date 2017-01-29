@@ -1,11 +1,13 @@
 package tim_tub.konverteringsapp;
 
 import java.math.BigDecimal;
+
 import tim_tub.common.converterMath;
 
 
 /**
  * Created by Tim on 2017-01-29.
+ *
  */
 
 class converterActivity_calculations {

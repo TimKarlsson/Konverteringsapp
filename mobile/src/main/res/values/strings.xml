@@ -66,14 +66,14 @@
 
 
 <!-- Info / Moment -->
-    <string name="infoMoment_Info">Moment i Nm - ISO 898-1</string>
+    <string name="infoMoment_Info">Moment i Nm &#8212; ISO 898&#8211;1</string>
     <string name="infoMoment_GrovSkruv">Grovgängade skruvar</string>
     <string name="infoMoment_Kvalité">Hållfastighet</string>
     <string name="infoMoment_Gänga">Gänga</string>
     <string name="infoMoment_stigning">Stigning</string>
     <string name="infoMoment_FinSkruv">Fingänga</string>
     <string name="infoMoment_StandardSkruv">Standardgänga</string>
-
+    <string name="convCoreButtonDirektion">Växla till och från</string>
 
 
 </resources>
