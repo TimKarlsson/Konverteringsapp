@@ -16,20 +16,21 @@
     <string name="convCoreFrån">Från:</string>
     <string name="convCoreTill">Till:</string>
     <string name="convCoreRun">Omvandla</string>
+    <string name="convCoreButtonDirektion">Växla till och från</string>
 
     <string name="convCoreErr1">Ange ett tal på rad 1!</string>
     <string name="convCoreErr2">Välj enhet att konvertera från!</string>
     <string name="convCoreErr3">Välj enhet att konvertera till!</string>
     <string name="convCoreErr4">Går inte att konvertera till samma enhet!</string>
 
-<!-- Effekt -->
+    <!-- Effekt -->
     <string-array name="convPowerArray">
         <item>Välj en enhet:</item>
         <item>HK</item>
         <item>KW</item>
     </string-array>
 
-<!-- Tryck-->
+    <!-- Tryck-->
     <string-array name="convPreassureArray">
         <item>Välj en enhet:</item>
         <item>Bar</item>
@@ -37,7 +38,7 @@
         <item>mmHg</item>
     </string-array>
 
-<!-- Hastighet-->
+    <!-- Hastighet-->
     <string-array name="convSpeedArray">
         <item>Välj en enhet:</item>
         <item>Km/H</item>
@@ -46,7 +47,7 @@
         <item>m/s</item>
     </string-array>
 
-<!-- Mått -->
+    <!-- Mått -->
     <string-array name="convMeasureArray">
         <item>Välj en enhet:</item>
         <item>dm</item>
@@ -55,7 +56,7 @@
         <item>Tum</item>
     </string-array>
 
-<!-- Flöde -->
+    <!-- Flöde -->
     <string-array name="convFlowArray">
         <item>Välj en enhet:</item>
         <item>cfh</item>
@@ -64,8 +65,11 @@
     </string-array>
 
 
+<!-- Info -->
+    <string name="infoButtonTorque">Åtdragningsmoment</string>
+    <string name="infoButtonKvalite">Skruvkvalité</string>
 
-<!-- Info / Moment -->
+    <!--Moment -->
     <string name="infoMoment_Info">Moment i Nm &#8212; ISO 898&#8211;1</string>
     <string name="infoMoment_GrovSkruv">Grovgängade skruvar</string>
     <string name="infoMoment_Kvalité">Hållfastighet</string>
@@ -73,7 +77,14 @@
     <string name="infoMoment_stigning">Stigning</string>
     <string name="infoMoment_FinSkruv">Fingänga</string>
     <string name="infoMoment_StandardSkruv">Standardgänga</string>
-    <string name="convCoreButtonDirektion">Växla till och från</string>
 
+    <!-- Kvalité -->
+    <string name="infoKvaliteInfoRad1">Draghållfasthetsklassen står ofta instansad på ovansidan av skruvskallen.</string>
+    <string name="infoKvaliteInfoRad2">Siffran före punkten anger 1/100 av brottgränsen.</string>
+    <string name="infoKvaliteInfoRad3">Siffran efter punkten 1/10 av förhållandet mellan brottgräns och sträckgräns.</string>
+    <string name="infoKvaliteInfoRad4">En hållfasthetsmärkning <b>12.9</b> innebär alltså en brottgräns på 1200 MPa och en sträckgräns på 90% av det, dvs 1080 MPa.</string>
+    <string name="infoKvaliteInfoRad5"><b>8.8</b> innebär brottgräns på 800 MPa och sträckgräns på 640 MPa (80%).</string>
+    <string name="infoKvaliteInfoRad6">1 MPa = 1 N/mm²</string>
+    <string name="infoKvaliteInfoRad7">Megapascal = newton per kvadratmillimeter.</string>
 
 </resources>

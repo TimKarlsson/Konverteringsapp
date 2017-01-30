@@ -14,8 +14,13 @@ public class infoActivity extends AppCompatActivity {
 
     }
 
-    public void moment(View view) {
+    public void torque(View view) {
         Intent infoMomentActivity = new Intent(this, infoActivity_moment.class);
         startActivity(infoMomentActivity);
+    }
+
+    public void quality(View view) {
+        Intent infoQualityActivity = new Intent(this, infoActivity_qualityInfo.class);
+        startActivity(infoQualityActivity);
     }
 }

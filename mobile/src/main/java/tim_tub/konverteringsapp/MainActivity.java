@@ -21,31 +21,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
-    public void converter(View view) {
-        Intent converterActivity = new Intent(this, converterActivity_choise.class);
-        startActivity(converterActivity);
-    }
-
-    public void info(View view) {
-        Intent informationActivity = new Intent(this, infoActivity.class);
-        startActivity(informationActivity);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,5 +64,16 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+
+
+    public void converter(View view) {
+        Intent converterActivity = new Intent(this, converterActivity_choise.class);
+        startActivity(converterActivity);
+    }
+
+    public void info(View view) {
+        Intent informationActivity = new Intent(this, infoActivity.class);
+        startActivity(informationActivity);
     }
 }

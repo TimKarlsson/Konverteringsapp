@@ -12,14 +12,14 @@
 
 
     <Button
-        android:id="@+id/infoKnappMoment"
-        android:text="Åtdragningsmoment"
+        android:id="@+id/infoButtonTorque"
+        android:text="@string/infoButtonTorque"
         android:textSize="@dimen/knappText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/infoCenter"
         android:layout_centerHorizontal="true"
-        android:onClick="moment"
+        android:onClick="torque"
         />
 
     <!-- "Space" för att centrera knapparna-->
@@ -32,24 +32,25 @@
         />
 
     <Button
-        android:text="Skruvkvalité"
-        android:id="@+id/infoKnappKvalite"
+        android:text="@string/infoButtonKvalite"
+        android:id="@+id/infoButtonQuality"
         android:textSize="@dimen/knappText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/infoCenter"
+        android:onClick="quality"
          />
 
 
 
     <!--<Button
-        android:id="@+id/button5"
+        android:id="@+id/infoButtonTap"
         android:text="Button"
         android:textSize="@dimen/knappText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/infoKnappKvalite"
+        android:layout_below="@id/infoButtonQuality"
         android:layout_centerHorizontal="true"
          />-->
 </RelativeLayout>
