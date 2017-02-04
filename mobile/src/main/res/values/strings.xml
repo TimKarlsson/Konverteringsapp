@@ -18,7 +18,7 @@
     <string name="convCoreRun">Omvandla</string>
     <string name="convCoreButtonDirektion">Växla till och från</string>
 
-    <string name="convCoreErr1">Ange ett tal på rad 1!</string>
+    <string name="convCoreErr1">Ange ett tal att konvertera!</string>
     <string name="convCoreErr2">Välj enhet att konvertera från!</string>
     <string name="convCoreErr3">Välj enhet att konvertera till!</string>
     <string name="convCoreErr4">Går inte att konvertera till samma enhet!</string>
@@ -56,6 +56,35 @@
         <item>Tum</item>
     </string-array>
 
+    <string-array name="convInchArray">
+        <item>Eller välj:</item>
+        <item>1/8\"</item>
+        <item>3/16\"</item>
+        <item>1/4\"</item>
+        <item>5/16\"</item>
+        <item>3/8\"</item>
+        <item>7/16\"</item>
+        <item>1/2\"</item>
+        <item>9/16\"</item>
+        <item>5/8\"</item>
+        <item>3/4\"</item>
+        <item>7/8\"</item>
+        <item>1\"</item>
+        <item>1 1/8\"</item>
+        <item>1  1/4\"</item>
+        <item>1  3/8\"</item>
+        <item>1  1/2\"</item>
+        <item>1  5/8\"</item>
+        <item>1  3/4\"</item>
+        <item>1  7/8\"</item>
+        <item>2\"</item>
+        <item>2 1/4\"</item>
+        <item>2 1/2\"</item>
+        <item>2 3/4\"</item>
+        <item>3\"</item>
+    </string-array>
+
+
     <!-- Flöde -->
     <string-array name="convFlowArray">
         <item>Välj en enhet:</item>
@@ -86,5 +115,6 @@
     <string name="infoKvaliteInfoRad5"><b>8.8</b> innebär brottgräns på 800 MPa och sträckgräns på 640 MPa (80%).</string>
     <string name="infoKvaliteInfoRad6">1 MPa = 1 N/mm²</string>
     <string name="infoKvaliteInfoRad7">Megapascal = newton per kvadratmillimeter.</string>
+    <string name="convCoreExtraInchInfo">Eller välj:</string>
 
 </resources>

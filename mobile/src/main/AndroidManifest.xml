@@ -35,7 +35,7 @@
         <activity
             android:name=".converterActivity_core"
             android:label=".converterActivity_core"
-            android:parentActivityName=".converterActivity_choise" >
+            android:parentActivityName=".converterActivity_choise">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="tim_tub.konverteringsapp.converterActivity_choise" />
