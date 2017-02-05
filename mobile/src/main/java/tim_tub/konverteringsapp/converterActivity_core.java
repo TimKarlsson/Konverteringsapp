@@ -5,11 +5,14 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -72,10 +75,10 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
-
 //Körs när spinners ändras
+    @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+
     //Visa/Dölj showInchSpinner
         if (converterActivity_choise.convChoise == 4 && (parent.getId()==R.id.convCoreSpinner1 || parent.getId()==R.id.convCoreSpinner2)) {
             hideKeyboard(view);
@@ -84,7 +87,7 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
         if (parent.getId()==R.id.convCoreSpinner3Inch && parent.getSelectedItemPosition() != 0) {
             EditText etInput = (EditText) findViewById(R.id.convCoreInput);
             etInput.setText("");
-            runConv(view);
+            //runConv(view);
         }
     }
     public void onNothingSelected(AdapterView<?> parent) {
@@ -93,32 +96,42 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
 
 
 //----------------------------------------------------------------------------------------
-
-//Visar eller döljer convInchSpinner och convInchInfo TextView.
+//Visar eller döljer convInchSpinner och convInchInfo TextView. Används bara vid tum
     void showInchSpinner() {
+
         if (converterActivity_choise.convChoise == 4) {
             Spinner spinnerInch = (Spinner) findViewById(R.id.convCoreSpinner3Inch);
             Spinner spinner1 = (Spinner) findViewById(R.id.convCoreSpinner1);
             Spinner spinner2 = (Spinner) findViewById(R.id.convCoreSpinner2);
             TextView tvInfoInch = (TextView) findViewById(R.id.convCoreInchInfo);
             TextView tv2 = (TextView) findViewById(R.id.convCoreText2);
+
             ArrayAdapter<CharSequence> spinnerInchArrayAdapter = ArrayAdapter.createFromResource(this, R.array.convInchArray, android.R.layout.simple_spinner_item);
             spinnerInchArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerInch.setAdapter(spinnerInchArrayAdapter);
+            //Används för att ändra layouten
+            RelativeLayout.LayoutParams rp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            rp.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            Button bt = (Button) findViewById(R.id.convCoreRun);
 
-            if (spinnerInch.getVisibility() == View.INVISIBLE) {
+            if (spinnerInch.getVisibility() == View.GONE) {
+                rp.addRule(RelativeLayout.BELOW, R.id.convCoreSpinner3Inch);
                 if (tv2.getText().equals(getString(R.string.convCoreFrån)) && spinner1.getSelectedItemPosition() == 4 && spinner2.getSelectedItemPosition() != 0) {
                     tvInfoInch.setVisibility(View.VISIBLE);
                     spinnerInch.setVisibility(View.VISIBLE);
+                    bt.setLayoutParams(rp);
                 } else if (tv2.getText().equals(getString(R.string.convCoreTill)) && spinner2.getSelectedItemPosition() == 4 && spinner1.getSelectedItemPosition() != 0) {
                     tvInfoInch.setVisibility(View.VISIBLE);
                     spinnerInch.setVisibility(View.VISIBLE);
+                    bt.setLayoutParams(rp);
                 }
             } else if (spinnerInch.getVisibility() == View.VISIBLE &&
                     (tv2.getText().equals(getString(R.string.convCoreFrån)) && spinner1.getSelectedItemPosition() != 4) ||
                     (tv2.getText().equals(getString(R.string.convCoreTill)) && spinner2.getSelectedItemPosition() != 4)){
                 tvInfoInch.setVisibility(View.INVISIBLE);
-                spinnerInch.setVisibility(View.INVISIBLE);
+                spinnerInch.setVisibility(View.GONE);
+                rp.addRule(RelativeLayout.BELOW, R.id.convCoreInput);
+                bt.setLayoutParams(rp);
                 //TODO: Fortsätt implementera Tum listan! Utför beräkning på listan.
             }
         }
@@ -126,43 +139,43 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
-//runConv körs när man tryckt på knapp convCoreRun "Omvandla"
-    //TODO: Lägg till långtryck för att konvertera direkt
+//Körs när man tryckt på knapp convCoreRun "Omvandla"
+//TODO: Lägg till långtryck för att konvertera direkt?
     public void runConv(View view) {
+
         TextView tvResult = (TextView) findViewById(R.id.convCoreResultat);
         TextView tv2 = (TextView) findViewById(R.id.convCoreText2);
         EditText etInput = (EditText) findViewById(R.id.convCoreInput);
         Spinner sp1 = (Spinner) findViewById(R.id.convCoreSpinner1);
         Spinner sp2 = (Spinner) findViewById(R.id.convCoreSpinner2);
         Spinner spinnerInch = (Spinner) findViewById(R.id.convCoreSpinner3Inch);
-        sUserInput = "";
+        //Hämtar input från EditText.
+        sUserInput = etInput.getText().toString();
 
         String sp1String = sp1.getSelectedItem().toString();
         String sp2String = sp2.getSelectedItem().toString();
 
-        if (spinnerInch.getVisibility() == View.VISIBLE && spinnerInch.getSelectedItemPosition() != 0) {
+        if (spinnerInch.getVisibility() == View.VISIBLE && spinnerInch.getSelectedItemPosition() != 0 && sUserInput.equals("")) {
             sUserInput = converterActivity_calculations.convertInch(spinnerInch, sUserInput);
+        } else if (sUserInput.equals("")) {
+            //Sätter 1 i input om inget är valt.
+            sUserInput = etInput.getHint().toString();
         } else {
-            sUserInput = etInput.getText().toString();
-        }
-        if (!sUserInput.equals("")) {
-            bdResult = new BigDecimal(sUserInput);
+            ////Hämtar input från EditText.
+            //sUserInput = etInput.getText().toString();
+            spinnerInch.setSelection(0);
         }
 
-
-    //Kollar efter fält som inte är angivna
+    //Kollar efter fält som inte är angivna.
         checkForErrors(sp1String, sp2String, tv2);
-
 
     //Kollar så att inga fel är satta och sen utför konverteringen.
         if ((!bErr1) && (!bErr2) && (!bErr3) && (!bErr4)) {
-
-
         //Kollar konverteringsriktningen och enheter
             setConvFromAndTo(tv2, sp1, sp2);
 
         //Konverterar och skriver ut resultatet
+            bdResult = new BigDecimal(sUserInput);
             printResult(bdResult);
         } else {
         //Visar eventuella felmeddelanden
@@ -177,9 +190,9 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
 //Körs när man trycker på pilknappen. Ändra riktning på omvandlingen.
     public void changeConvDir(View view) {
+
         ImageButton directionButton = (ImageButton) findViewById(R.id.convCoreButtonDirektion);
         TextView tv2 = (TextView) findViewById(R.id.convCoreText2);
         TextView tv3 = (TextView) findViewById(R.id.convCoreText3);
@@ -197,13 +210,13 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
         }
 //TODO: Kör inte om fel finns.
         showInchSpinner();
-        //runConv(view);
+        runConv(view);
     }
 
 //----------------------------------------------------------------------------------------
-
 //Felhantering
     void checkForErrors(String sp1String, String sp2String, TextView tv2) {
+
         //Nollar alla fel
         error1 = "";
         error2 = "";
@@ -215,7 +228,7 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
         bErr4 = false;
 
     //Err1 - Kollar om fält 1 är tomt.
-        if (sUserInput.equals("")) {
+        if (sUserInput.equals(".")) {
             error1 = getString(R.string.convCoreErr1) + "\n";
             bErr1 = true;
         }
@@ -248,10 +261,10 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
+//Sätter enheterna från och till
     void setConvFromAndTo (TextView tv2, Spinner sp1, Spinner sp2) {
+
         // Vänder ordningen på sp1 och sp2 ifall konv. riktningen är bytt.
-//TODO: Flytta till changeConvDir??
         if (tv2.getText().equals(getString(R.string.convCoreFrån))) {
             iConvFrom = sp1.getSelectedItemPosition();
             iConvTo = sp2.getSelectedItemPosition();
@@ -264,7 +277,6 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
 //Döljer knappsatsen.
     void hideKeyboard(View view) {
         try {
@@ -274,7 +286,6 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
 //Scrollar ned till botten av sidan.
     void scrollDown() {
         final ScrollView scroll = (ScrollView) findViewById(R.id.activity_converter_effekt);
@@ -285,9 +296,9 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
     }
 
 //----------------------------------------------------------------------------------------
-
 //Skriver ut resultatet
     void printResult(BigDecimal bdResult) {
+
         TextView tvResult = (TextView) findViewById(R.id.convCoreResultat);
     //Kör begärd uträkning.
         bdResult = converterActivity_calculations.convertUnits(iConvFrom, iConvTo, bdResult);
@@ -302,4 +313,4 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
 
 //Buggar
 //TODO: När "Till:" spinnern väljs så nollas spinnerInch!
-//TODO: Dölj tangentbord när man gått från EditText till Spinner
+//TODO: Dölj tangentbord när man tryckt enter på EditText (Bara med textIsSelectable="true" på convCoreResultat)

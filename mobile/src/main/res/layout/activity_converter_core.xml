@@ -51,7 +51,7 @@
 
         <Spinner
             android:id="@+id/convCoreSpinner1"
-            android:layout_width="160dp"
+            android:layout_width="@dimen/convSpinner"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/convCore1"
             android:layout_alignBottom="@+id/convCore1"
@@ -101,7 +101,7 @@
 
         <Spinner
             android:id="@+id/convCoreSpinner2"
-            android:layout_width="160dp"
+            android:layout_width="@dimen/convSpinner"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/convCore2"
             android:layout_alignBottom="@+id/convCore2"
@@ -123,15 +123,29 @@
 
         <EditText
             android:id="@+id/convCoreInput"
-            android:hint="@string/convInputHint"
+            android:hint="1"
             android:inputType="numberDecimal"
             android:layout_width="wrap_content"
-            android:minWidth="152dp"
+            android:minWidth="130dp"
+            android:maxWidth="148dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/convCore3"
             android:layout_alignBottom="@+id/convCore3"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            tools:ignore="HardcodedText"
+            />
 
+        <TextView
+            android:id="@+id/convCoreInputInfo"
+            android:text="@string/convInputHint"
+            android:layout_toEndOf="@id/convCore3"
+            android:layout_alignStart="@id/convCoreText2"
+            android:layout_alignBaseline="@id/convCore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+    <!-- Rad 5 -->
         <TextView
             android:id="@+id/convCoreInchInfo"
             android:text="@string/convCoreExtraInchInfo"
@@ -145,35 +159,36 @@
         <!-- TODO:http://www.rapidtables.com/convert/length/inch-to-mm.htm -->
         <Spinner
             android:id="@+id/convCoreSpinner3Inch"
-            android:layout_width="160dp"
+            android:layout_width="@dimen/convSpinner"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/convCoreInchInfo"
             android:layout_centerHorizontal="true"
-            android:visibility="invisible"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
 
             />
 
-    <!-- Rad 5 -->
+    <!-- Rad 6 -->
         <Button
             android:text="@string/convCoreRun"
             android:id="@+id/convCoreRun"
-            android:layout_below="@id/convCoreSpinner3Inch"
-            android:layout_marginTop="20dp"
+            android:layout_below="@id/convCoreInput"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:onClick="runConv"/>
 
-    <!-- Rad 6 -->
+    <!-- Rad 7 -->
         <TextView
             android:id="@+id/convCoreResultat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/convCoreRun"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             />
     </RelativeLayout>
 </ScrollView>

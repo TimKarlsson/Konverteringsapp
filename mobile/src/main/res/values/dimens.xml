@@ -7,4 +7,5 @@
     <dimen name="knappText">15sp</dimen>
     <dimen name="knappBredd">150dp</dimen>
     <dimen name="rubrik">21sp</dimen>
+    <dimen name="convSpinner">140dp</dimen>
 </resources>

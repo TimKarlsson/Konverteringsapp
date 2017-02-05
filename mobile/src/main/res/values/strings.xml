@@ -25,14 +25,14 @@
 
     <!-- Effekt -->
     <string-array name="convPowerArray">
-        <item>Välj en enhet:</item>
+        <item>Välj enhet:</item>
         <item>HK</item>
         <item>KW</item>
     </string-array>
 
     <!-- Tryck-->
     <string-array name="convPreassureArray">
-        <item>Välj en enhet:</item>
+        <item>Välj enhet:</item>
         <item>Bar</item>
         <item>Psi</item>
         <item>mmHg</item>
@@ -40,7 +40,7 @@
 
     <!-- Hastighet-->
     <string-array name="convSpeedArray">
-        <item>Välj en enhet:</item>
+        <item>Välj enhet:</item>
         <item>Km/H</item>
         <item>Mph</item>
         <item>Knop</item>
@@ -49,7 +49,7 @@
 
     <!-- Mått -->
     <string-array name="convMeasureArray">
-        <item>Välj en enhet:</item>
+        <item>Välj enhet:</item>
         <item>dm</item>
         <item>cm</item>
         <item>mm</item>
@@ -57,7 +57,7 @@
     </string-array>
 
     <string-array name="convInchArray">
-        <item>Eller välj:</item>
+        <item>Tum</item>
         <item>1/8\"</item>
         <item>3/16\"</item>
         <item>1/4\"</item>
