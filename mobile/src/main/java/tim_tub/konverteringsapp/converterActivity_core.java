@@ -116,11 +116,8 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
 
             if (spinnerInch.getVisibility() == View.GONE) {
                 rp.addRule(RelativeLayout.BELOW, R.id.convCoreSpinner3Inch);
-                if (tv2.getText().equals(getString(R.string.convCoreFrån)) && spinner1.getSelectedItemPosition() == 4 && spinner2.getSelectedItemPosition() != 0) {
-                    tvInfoInch.setVisibility(View.VISIBLE);
-                    spinnerInch.setVisibility(View.VISIBLE);
-                    bt.setLayoutParams(rp);
-                } else if (tv2.getText().equals(getString(R.string.convCoreTill)) && spinner2.getSelectedItemPosition() == 4 && spinner1.getSelectedItemPosition() != 0) {
+                if ((tv2.getText().equals(getString(R.string.convCoreFrån)) && spinner1.getSelectedItemPosition() == 4 && spinner2.getSelectedItemPosition() != 0) ||
+                        (tv2.getText().equals(getString(R.string.convCoreTill)) && spinner2.getSelectedItemPosition() == 4 && spinner1.getSelectedItemPosition() != 0)) {
                     tvInfoInch.setVisibility(View.VISIBLE);
                     spinnerInch.setVisibility(View.VISIBLE);
                     bt.setLayoutParams(rp);
@@ -132,7 +129,6 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
                 spinnerInch.setVisibility(View.GONE);
                 rp.addRule(RelativeLayout.BELOW, R.id.convCoreInput);
                 bt.setLayoutParams(rp);
-                //TODO: Fortsätt implementera Tum listan! Utför beräkning på listan.
             }
         }
 
@@ -208,7 +204,7 @@ public class converterActivity_core extends AppCompatActivity implements Adapter
             tv2.setText(R.string.convCoreFrån);
             tv3.setText(R.string.convCoreTill);
         }
-//TODO: Kör inte om fel finns.
+
         showInchSpinner();
         runConv(view);
     }
