@@ -21,8 +21,13 @@ public class converterMath {
 
 //Tryck
     public static final BigDecimal barTillPsi = new BigDecimal(14.5037738);                                             //Omräkning Bar till Psi
+    public static final BigDecimal barTillMPA = new BigDecima(0.1);
+    
     public static final BigDecimal psiTillBar = new BigDecimal(0.0689475729);                                           //Omräkning Psi till Bar
-
+    public static final BigDecimal psiTillMPA = new BigDecimal(0.00689475729);
+    
+    public static final BigDecimal MPATillpsi = new BigDecimal(145.037738007);
+    
 
 
 
